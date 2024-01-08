@@ -30,7 +30,7 @@ const About = () => {
                 animate={inViewHeading ? "animate" : "initial"}
                 transition={{ duration: 0.6 }}
                 className="flex gap-4 items-center"
-            >qq
+            >
                 <h3 className="text-textWhite text-3xl sm:text-5xl font-[800]">
                     About Me
                 </h3>
@@ -152,3 +152,4 @@ const About = () => {
 };
 
 export default About;
+
