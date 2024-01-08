@@ -7,7 +7,7 @@ import authorisation from "../assets/projects/authorisation.png";
 export const ProjectList = [
     {
         id: 1,
-        name: "Weather AppW",
+        name: "Weather App",
         description:
             "This weather app is a testament to my commitment to creating functional and visually pleasing applications. Explore the world of weather with ease, and stay tuned for more exciting projects in the pipeline!",
         img: discord,
@@ -31,10 +31,10 @@ export const ProjectList = [
             "Tailwind CSS",
             "Stripe",
         ],
-        source: "https://github.com/aashish-dhiman/E-Commerce",
+        source: "https://github.com/Abinet16/",
         demo: "https://better-overcoat-fly.cyclic.cloud/",
     },
-    {
+   /* {
         id: 3,
         name: "Secret Keeper",
         description:
@@ -44,7 +44,7 @@ export const ProjectList = [
         tech: ["Node.js", "Express.js", "EJS", "MongoDB", "Passport.js"],
         source: "https://github.com/Abinet16/",
         demo: null,
-    },
+    },*/
     {
         id: 4,
         name: "Keeper - Keep Your Notes",
@@ -52,11 +52,11 @@ export const ProjectList = [
             "Inspired by Google Keep, Keeper is a note-taking website developed with React and adorned with Tailwind CSS and Material UI. It offers a user-friendly experience, allowing you to effortlessly create and manage notes. The responsive design ensures a seamless experience across all devices, making note-taking a breeze.",
         img: keeper,
         //max 6 tech stack
-        tech: ["React", "Tailwind CSS", "Material UI"],
+        tech: ["React", "Bootstrap CSS", "Material UI"],
         source: "https://github.com/Abinet16/",
         demo: "",
     },
-    {
+ {
         id: 5,
         name: "Medconnect",
         description:
@@ -68,3 +68,4 @@ export const ProjectList = [
         demo: "",
     },
 ];
+
