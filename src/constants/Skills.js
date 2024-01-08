@@ -6,7 +6,7 @@ import cpp from "../assets/cpp.svg";
 import node from "../assets/node.svg";
 import mongo from "../assets/mongo.svg";
 import express from "../assets/express.svg";
-import tailwind from "../assets/tailwind.svg";
+import Bootstrap from "../assets/bootstrap.svg";
 import materialUI from "../assets/materialUI.svg";
 import github from "../assets/github.svg";
 import vs from "../assets/vs.svg";
@@ -55,8 +55,8 @@ export const Skills = [
         description: "MongoB",
     },
     {
-        img: tailwind,
-        description: "Tailwind CSS",
+        img: Bootstrap,
+        description: "Bootstrap CSS",
     },
     {
         img: materialUI,
@@ -71,3 +71,4 @@ export const Skills = [
         description: "VS Code",
     },
 ];
+
