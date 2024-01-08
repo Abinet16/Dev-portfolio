@@ -38,7 +38,7 @@ const Navbar = () => {
                     {/* for mobile view */}
                     <span className="sm:hidden">@Abenet</span>
                     {/* for web view */}
-                    <span className="hidden sm:block">@Abenet_MULU</span>
+                    <span className="hidden sm:block bg-bgblue">@Abenet_MULU</span>
                 </ScrollLink>
 
                 {/* toggle navbar mobile view */}
@@ -176,3 +176,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
