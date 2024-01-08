@@ -16,7 +16,7 @@ const Contact = () => {
 
     const [show, setShow] = useState(false);
     const [spin, setSpin] = useState(false);
-    const [state, handleSubmit] = useForm("xpzgodpa");
+    const [state, handleSubmit] = useForm("xgegejwz");
     const [formData, setFormData] = useState({
         email: "",
         subject: "",
@@ -138,7 +138,7 @@ const Contact = () => {
                     transition={{ duration: 1 }}
                     className="mt-10 md:mt-0"
                 >
-                    <form className="flex flex-col" onSubmit={handleSubmit}>
+                    <form className="flex flex-col" onSubmit={handleSubmit} >
                         <div className="mb-6">
                             <label
                                 htmlFor="email"
@@ -248,3 +248,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
