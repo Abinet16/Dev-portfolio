@@ -11,7 +11,7 @@ import {
     scrollSpy,
     scroller,
 } from "react-scroll";
-
+import mycv from "..assets/my cv.pdf";
 const HeroSection = () => {
     const refContent = useRef(null);
     const inViewContent = useInView(refContent, { once: true });
@@ -55,7 +55,7 @@ const HeroSection = () => {
                                 "I make ideas & things alive.",
                                 500,
                             ]}
-                            speed={50}
+                            speed={60}
                             // style={{ fontSize: "10px" }}
                             className="text-lg md:text-3xl font-[500]"
                             repeat={Infinity}
@@ -73,14 +73,20 @@ const HeroSection = () => {
                             >
                                 Hire Me
                             </ScrollLink>
+                            <button id="downloadButton">Download-CV</button>
                             <a
-                                src="/assets/myp.jpg"
+                                id="pdfLink"
+                                href={mycv}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                download="abinetsCV.pdf"
                                 className="px-6 py-3 w-full sm:w-fit rounded-full md:mr-4 bg-transparent border-white border-2 text-white text-center hover:bg-darkHover hover:-translate-y-[2px] transition-all duration-500 ease-in-out "
-                            >
-                                Download CV
-                            </a>
+                            ></a>
+
+                            document.getElementById('downloadButton').addEventListener('click', function() {
+                                // Trigger the download link
+                              document.getElementById('pdfLink').click()
+                               });
                         </div>
                     </motion.div>
                     {/* image section */}
@@ -106,7 +112,7 @@ const HeroSection = () => {
                         className="col-span-5 w-[250px] h-[180px] lg:w-[400px] lg:h-[400px] relative overflow-hidden mt-12 sm:-mt-4"
                     >
                         <img
-                            src="/images/heroImg.png"
+                            src="/images/heroImg.mp4"
                             alt="Meme Icon"
                             loading="lazy"
                             className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]"
@@ -119,3 +125,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
