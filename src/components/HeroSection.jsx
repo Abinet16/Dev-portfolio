@@ -11,7 +11,6 @@ import {
     scrollSpy,
     scroller,
 } from "react-scroll";
-import mycv from "..assets/my cv.pdf";
 const HeroSection = () => {
     const refContent = useRef(null);
     const inViewContent = useInView(refContent, { once: true });
@@ -73,20 +72,14 @@ const HeroSection = () => {
                             >
                                 Hire Me
                             </ScrollLink>
-                            <button id="downloadButton">Download-CV</button>
                             <a
-                                id="pdfLink"
-                                href={mycv}
+                                href="https://drive.google.com/file/d/1YuqlZCP_lGQa_LA9OwEzNgNrg4d5JYQ6/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                download="abinetsCV.pdf"
                                 className="px-6 py-3 w-full sm:w-fit rounded-full md:mr-4 bg-transparent border-white border-2 text-white text-center hover:bg-darkHover hover:-translate-y-[2px] transition-all duration-500 ease-in-out "
-                            ></a>
-
-                            document.getElementById('downloadButton').addEventListener('click', function() {
-                                // Trigger the download link
-                              document.getElementById('pdfLink').click()
-                               });
+                            >
+                                Download-CV
+                            </a>
                         </div>
                     </motion.div>
                     {/* image section */}
