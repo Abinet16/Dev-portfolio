@@ -104,12 +104,12 @@ const HeroSection = () => {
                         transition={{ duration: 0.8 }}
                         className="col-span-5 w-[250px] h-[180px] lg:w-[400px] lg:h-[400px] relative overflow-hidden mt-12 sm:-mt-4"
                     >
-                        <video width="640" height="360" controls>
-                          <source  src="/images/heroImg.mp4"
+                        <img
+                            src="/images/photo.png"
                             alt="Meme Icon"
                             loading="lazy"
                             className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]"
-                            type="video/mp4"/>  
+                        />
                         
                     </motion.div>
                 </div>
