@@ -18,21 +18,18 @@ export const ProjectList = [
     },
     {
         id: 2,
-        name: "E-Commerce",
+        name: "Player",
         description:
-            "Our Flipkart Clone, built with MERN stack, revolutionizes online shopping. It provides secure user authentication, extensive product catalog, efficient cart management, and Stripe-powered payments. Users easily access order history, while admins have a dedicated dashboard. Responsive design, Bcrypt-secured passwords, and Cloudinary image storage ensure a seamless and secure shopping experience.",
+            "player using React JS",
         img: ecommerce,
         //max 6 tech stack
         tech: [
-            "React",
-            "Node.js",
-            "Express.js",
-            "MongoDB",
-            "Tailwind CSS",
+            "React",  
+            "Bootstrap CSS",
             "Stripe",
         ],
         source: "https://github.com/Abinet16/",
-        demo: "https://better-overcoat-fly.cyclic.cloud/",
+        demo: "https://mezmur-player.netlify.app/",
     },
    /* {
         id: 3,
