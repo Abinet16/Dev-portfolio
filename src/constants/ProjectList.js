@@ -1,12 +1,23 @@
 import ecommerce from "../assets/projects/ecommerce.png";
 import discord from "../assets/projects/discord.png";
 import medconnect from "../assets/projects/medconnect.png";
-import keeper from "../assets/projects/keeper.png";
+import keeper from "../assets/projects/keeper.PNG";
 import authorisation from "../assets/projects/authorisation.png";
 
 export const ProjectList = [
     {
         id: 1,
+        name: "Service Management System",
+        description:
+            "A service management system built with C#, React, and SQL. This application provides with a role based platform for managing various services, including user authentication, service creation, and management. It features a user-friendly interface and robust backend functionality to ensure efficient service handling and data management. .",
+        img: authorisation,
+        //max 6 tech stack
+        tech: ["C#", "SQL", "React", "Redux", "Tailwind", "Google Maps API"],
+        source: "https://github.com/Abinet16/Learning-mate-",
+        demo: "https://service.getnetsoft.com/",
+    },
+    {
+        id: 2,
         name: "Weather App",
         description:
             "This weather app is a testament to my commitment to creating functional and visually pleasing applications. Explore the world of weather with ease, and stay tuned for more exciting projects in the pipeline!",
@@ -16,53 +27,48 @@ export const ProjectList = [
         source: "https://github.com/Abinet16/",
         demo: "https://tabors-weatherapp.netlify.app/",
     },
+     {
+        id: 3,
+        name: "Learning Mate",
+        description:
+            "Learning Mate is a comprehensive educational platform designed to enhance the learning experience. It offers a wide range of features including AI-powered study assistance, note-taking capabilities, and a user-friendly interface. The platform is built with React and Tailwind CSS, supbase, , ensuring a responsive and visually appealing design. Whether you're looking to improve your study habits or need help with specific subjects, Learning Mate is here to support your educational journey.",
+        img: medconnect,
+        //max 6 tech stack
+        tech: ["React 18 with TypeScript", "Tailwind CSS", "Supabase for Backend & Auth", 
+            "Google's Gemini AI API",
+             "PDF.js & Mammoth for Document Processing",
+             "Web Speech API for Voice Input",
+        ],
+        source: "https://github.com/Abinet16/Learning-mate-",
+        demo: "https://learning-mate-mu.vercel.app/",
+    },
     {
-        id: 2,
+        id: 4,
         name: "Player",
         description:
-            "player using React JS",
+            "A modern and sleek music player application built with React and Bootstrap CSS. This app offers a seamless user experience with features like playlist management, song search, and intuitive controls. The responsive design ensures optimal performance across all devices, making it easy to enjoy your favorite tunes on the go. Whether you're a casual listener or a music enthusiast, this player is designed to enhance your listening experience with its clean interface and smooth functionality.",
         img: ecommerce,
         //max 6 tech stack
         tech: [
             "React",  
             "Bootstrap CSS",
-            "Stripe",
+            
         ],
         source: "https://github.com/Abinet16/",
         demo: "https://mezmur-player.netlify.app/",
     },
-   /* {
-        id: 3,
-        name: "Secret Keeper",
-        description:
-            "The Secret Keeper built with Node.js, Express.js, and Passport.js, provides a user-friendly platform for secure registration, secret sharing, and anonymous content viewing. It incorporates Google OAuth 2.0 for seamless login. With a focus on ease of use, it showcases modern web development in a straightforward manner, offering a safe and engaging online experience.",
-        img: authorisation,
-        //max 6 tech stack
-        tech: ["Node.js", "Express.js", "EJS", "MongoDB", "Passport.js"],
-        source: "https://github.com/Abinet16/",
-        demo: null,
-    },*/
+    
     {
-        id: 4,
-        name: "Keeper - Keep Your Notes",
+        id: 5,
+        name: "School Management System",
         description:
-            "Inspired by Google Keep, Keeper is a note-taking website developed with React and adorned with Tailwind CSS and Material UI. It offers a user-friendly experience, allowing you to effortlessly create and manage notes. The responsive design ensures a seamless experience across all devices, making note-taking a breeze.",
+            "A comprehensive school management system built with the MERN stack (MongoDB, Express.js, React, Node.js). This application streamlines administrative tasks, enhances communication between teachers, students, and parents, and provides a user-friendly interface for managing student records, attendance, grades, and more. It is designed to improve the overall efficiency of school operations while ensuring data security and accessibility.",
         img: keeper,
         //max 6 tech stack
-        tech: ["React", "Bootstrap CSS", "Material UI"],
-        source: "https://github.com/Abinet16/",
+        tech: ["React", "Tailind CSS", "Node.js", "Express.js", "MongoDB"],
+        source: "https://github.com/Abinet16/School-management-system-MERN",
         demo: "",
     },
- {
-        id: 5,
-        name: "Medconnect",
-        description:
-            "MedConnect, an innovative online healthcare platform, redefines the way users access medical expertise. Seamlessly designed using React and tailored libraries, it offers remote consultations for medical advice. While our project is just a frontend prototype, it promises a user-friendly interface, responsive design, and smooth navigation.",
-        img: medconnect,
-        //max 6 tech stack
-        tech: ["React", "Tailwind CSS", "Swiper"],
-        source: "https://github.com/Abinet16/",
-        demo: "",
-    },
-];
+]
+
 
