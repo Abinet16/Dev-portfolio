@@ -1,7 +1,7 @@
 import ecommerce from "../assets/projects/ecommerce.png";
 import discord from "../assets/projects/discord.png";
 import medconnect from "../assets/projects/medconnect.png";
-import keeper from "../assets/projects/keeper.PNG";
+import keeper from "../assets/projects/keeper.png";
 import authorisation from "../assets/projects/authorisation.png";
 
 export const ProjectList = [
