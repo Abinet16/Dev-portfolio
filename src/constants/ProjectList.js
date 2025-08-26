@@ -65,9 +65,14 @@ export const ProjectList = [
             "A comprehensive school management system built with the MERN stack (MongoDB, Express.js, React, Node.js). This application streamlines administrative tasks, enhances communication between teachers, students, and parents, and provides a user-friendly interface for managing student records, attendance, grades, and more. It is designed to improve the overall efficiency of school operations while ensuring data security and accessibility.",
         img: keeper,
         //max 6 tech stack
-        tech: ["React", "Tailind CSS", "Node.js", "Express.js", "MongoDB"],
+        tech: [
+            "React",
+             "Tailind CSS", 
+             "Node.js", 
+             "Express.js",
+             "MongoDB"],
         source: "https://github.com/Abinet16/School-management-system-MERN",
-        demo: "",
+        demo: "https://mulu-school.netlify.app/",
     },
 ]
 

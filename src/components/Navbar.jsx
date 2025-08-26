@@ -17,14 +17,21 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("intro");
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  // Handle scroll events
+  // Handle scroll events and initial section detection
   useEffect(() => {
-    const handleScroll = () => {
+    const updateActiveSection = () => {
+      // Update scroll state
       setScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
       const sections = MenuItems.map(item => item.url);
       const scrollPosition = window.scrollY + 100;
+      
+      // Check if we're at the top of the page
+      if (window.scrollY === 0) {
+        setActiveSection("intro");
+        return;
+      }
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -40,8 +47,31 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Initial check on component mount
+    updateActiveSection();
+
+    // Add scroll listener
+    window.addEventListener("scroll", updateActiveSection);
+    
+    return () => window.removeEventListener("scroll", updateActiveSection);
+  }, []);
+
+  // Set initial active section on page load
+  useEffect(() => {
+    // Check URL hash if present
+    const hash = window.location.hash.replace('#', '');
+    if (hash && MenuItems.some(item => item.url === hash)) {
+      setActiveSection(hash);
+      // Scroll to the section after a short delay to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      setActiveSection("intro");
+    }
   }, []);
 
   const toggleDarkMode = () => {
@@ -56,6 +86,8 @@ const Navbar = () => {
   const handleNavClick = (url) => {
     closeMobileMenu();
     setActiveSection(url);
+    // Update URL hash without scrolling (react-scroll will handle scrolling)
+    window.history.pushState(null, null, `#${url}`);
   };
 
   return (
@@ -215,7 +247,7 @@ const Navbar = () => {
                   to={menuItem.url}
                   smooth={true}
                   duration={500}
-                  onClick={() => setActiveSection(menuItem.url)}
+                  onClick={() => handleNavClick(menuItem.url)}
                   className={`relative px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 ${
                     activeSection === menuItem.url
                       ? "text-blue-400 font-medium"

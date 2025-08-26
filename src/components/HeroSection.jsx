@@ -5,8 +5,14 @@ import { Link as ScrollLink } from "react-scroll";
 
 const HeroSection = () => {
     const refContent = useRef(null);
-    const inViewContent = useInView(refContent, { once: true });
+    const inViewContent = useInView(refContent, { once: true, amount: 0.1 });
     const [isDownloadHovered, setIsDownloadHovered] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Force animations to show immediately on component mount
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     // Floating animation for the image
     const floatingAnimation = {
@@ -23,6 +29,7 @@ const HeroSection = () => {
             <section
                 className="relative overflow-hidden pt-28 pb-16 px-4 sm:px-8 lg:pt-36 lg:pb-24"
                 id="intro"
+                ref={refContent}
             >
                 {/* Background elements */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
@@ -33,19 +40,14 @@ const HeroSection = () => {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 place-items-center">
                     {/* intro section */}
                     <motion.div
-                        ref={refContent}
                         initial={{ opacity: 0, x: -100, scale: 0.95 }}
-                        animate={
-                            inViewContent
-                                ? { opacity: 1, x: 0, scale: 1 }
-                                : { opacity: 0, x: -100, scale: 0.95 }
-                        }
+                        animate={isVisible ? { opacity: 1, x: 0, scale: 1 } : {}}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="col-span-7 text-center lg:text-left"
                     >
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
-                            animate={inViewContent ? { opacity: 1, y: 0 } : {}}
+                            animate={isVisible ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-textPara mb-6"
                         >
@@ -69,7 +71,7 @@ const HeroSection = () => {
                             <TypeAnimation
                                 sequence={[
                                     500,
-                                    " Full-stack Web App Developer",
+                                    "Full-stack Web App Developer",
                                     1000,
                                     "React Specialist",
                                     1000,
@@ -80,12 +82,13 @@ const HeroSection = () => {
                                 deletionSpeed={70}
                                 className="text-lg md:text-2xl font-medium text-textPara"
                                 repeat={Infinity}
+                                wrapper="span"
                             />
                         </div>
 
                         <motion.p 
                             initial={{ opacity: 0 }}
-                            animate={inViewContent ? { opacity: 1 } : {}}
+                            animate={isVisible ? { opacity: 1 } : {}}
                             transition={{ delay: 0.6, duration: 0.8 }}
                             className="text-textPara text-base sm:text-lg mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0"
                         >
@@ -95,7 +98,7 @@ const HeroSection = () => {
                         
                         <motion.div 
                             initial={{ opacity: 0, y: 20 }}
-                            animate={inViewContent ? { opacity: 1, y: 0 } : {}}
+                            animate={isVisible ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 0.8, duration: 0.6 }}
                             className="flex items-center gap-4 flex-col sm:flex-row justify-center lg:justify-start"
                         >
@@ -134,7 +137,7 @@ const HeroSection = () => {
                         {/* Social links */}
                         <motion.div 
                             initial={{ opacity: 0 }}
-                            animate={inViewContent ? { opacity: 1 } : {}}
+                            animate={isVisible ? { opacity: 1 } : {}}
                             transition={{ delay: 1, duration: 0.6 }}
                             className="flex items-center justify-center lg:justify-start gap-5 mt-10 text-xl"
                         >
@@ -174,23 +177,18 @@ const HeroSection = () => {
 
                     {/* image section */}
                     <motion.div
-                        ref={refContent}
                         initial={{
                             opacity: 0,
                             x: 100,
                             scale: 0.9,
                             filter: "blur(10px)",
                         }}
-                        animate={
-                            inViewContent
-                                ? {
-                                    opacity: 1,
-                                    x: 0,
-                                    scale: 1,
-                                    filter: "blur(0px)",
-                                }
-                                : { opacity: 0, x: 100, scale: 0.9 }
-                        }
+                        animate={isVisible ? {
+                            opacity: 1,
+                            x: 0,
+                            scale: 1,
+                            filter: "blur(0px)",
+                        } : {}}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="col-span-5 relative mt-12 lg:mt-0"
                     >
@@ -200,7 +198,7 @@ const HeroSection = () => {
                             
                             {/* Main image container */}
                             <motion.div
-                                animate={floatingAnimation}
+                                animate={isVisible ? floatingAnimation : {}}
                                 className="relative w-full h-full flex items-center justify-center"
                             >
                                 <img
@@ -216,10 +214,10 @@ const HeroSection = () => {
                             
                             {/* Floating elements */}
                             <motion.div
-                                animate={{
+                                animate={isVisible ? {
                                     y: [0, -20, 0],
                                     rotate: [0, 5, 0],
-                                }}
+                                } : {}}
                                 transition={{
                                     duration: 6,
                                     repeat: Infinity,
@@ -232,10 +230,10 @@ const HeroSection = () => {
                             </motion.div>
                             
                             <motion.div
-                                animate={{
+                                animate={isVisible ? {
                                     y: [0, 15, 0],
                                     rotate: [0, -5, 0],
-                                }}
+                                } : {}}
                                 transition={{
                                     duration: 5,
                                     repeat: Infinity,
@@ -253,7 +251,7 @@ const HeroSection = () => {
                 {/* Scroll indicator */}
                 <motion.div 
                     initial={{ opacity: 0 }}
-                    animate={inViewContent ? { opacity: 1 } : {}}
+                    animate={isVisible ? { opacity: 1 } : {}}
                     transition={{ delay: 1.5, duration: 0.8 }}
                     className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
                 >
@@ -265,7 +263,7 @@ const HeroSection = () => {
                     >
                         <span className="text-sm mb-2">Scroll down</span>
                         <motion.div
-                            animate={{ y: [0, 8, 0] }}
+                            animate={isVisible ? { y: [0, 8, 0] } : {}}
                             transition={{ duration: 2, repeat: Infinity }}
                             className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1"
                         >
