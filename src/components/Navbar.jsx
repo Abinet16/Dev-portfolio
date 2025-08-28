@@ -167,7 +167,7 @@ const Navbar = () => {
 
                   <div className="flex gap-5 text-2xl mb-8 justify-center">
                     <a
-                      href="https://www.linkedin.com/in/abinetshegaw16/"
+                      href="https://www.linkedin.com/in/abenetshegaw16/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 hover:text-blue-400 transition-colors"
