@@ -106,7 +106,7 @@ const Contact = () => {
                                     <BsGithub className="w-6 h-6 text-textPara group-hover:text-white" />
                                 </motion.a>
                                 <motion.a
-                                    href="https://www.linkedin.com/in/abinetshegaw16/"
+                                    href="https://www.linkedin.com/in/abenetshegaw16/"
                                     className="p-3 bg-white/5 rounded-xl border border-white/10 hover:bg-blue-500/20 hover:border-blue-500/30 transition-all duration-300 group"
                                     target="_blank"
                                     rel="noopener noreferrer"
