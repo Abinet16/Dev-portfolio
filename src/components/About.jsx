@@ -137,9 +137,9 @@ const About = () => {
                             className="text-textWhite text-lg sm:text-xl leading-8 mb-8 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm"
                         >
                             <span className="block text-2xl font-semibold mb-3 text-blue-300">Greetings!</span>
-                            I'm Abenet Shegaw, a passionate and dedicated web developer with a flair for creating dynamic and user-friendly applications. In my latest project, I've crafted a sleek and intuitive weather app that provides real-time weather information with a modern touch.
+                           Hello, I’m Abenet Shegaw — a passionate and dedicated web developer with a flair for creating clean, dynamic, and user-friendly applications. I specialize in transforming ideas into seamless digital experiences, blending creativity with technical precision.
                             <br /><br />
-                            I'm a quick learner always looking to expand my knowledge and skill set. I thrive on challenges and enjoy finding creative solutions to complex problems.
+                           As a fast learner who thrives on challenges, I love tackling complex problems and discovering elegant solutions. My journey is fueled by curiosity, continuous growth, and the joy of building technology that makes a real impact.
                         </motion.p>
 
                         {/* Tabs */}
