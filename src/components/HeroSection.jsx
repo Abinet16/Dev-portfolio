@@ -1,4 +1,3 @@
-// --- START OF FILE HeroSection.jsx ---
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";

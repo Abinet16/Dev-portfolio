@@ -1,4 +1,3 @@
-// --- START OF FILE Contact.jsx ---
 import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";

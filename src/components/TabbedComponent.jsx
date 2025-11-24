@@ -1,4 +1,3 @@
-// --- START OF FILE TabbedComponent.jsx ---
 import { motion } from "framer-motion";
 
 const TabbedComponent = ({ active, selectTab, children }) => {

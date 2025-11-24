@@ -1,4 +1,3 @@
-// --- START OF FILE Projects.jsx ---
 import LeftView from "./projectType/LeftView";
 import RightView from "./projectType/RightView";
 import { ProjectList } from "../constants/ProjectList";

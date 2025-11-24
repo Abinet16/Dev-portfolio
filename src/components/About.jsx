@@ -1,5 +1,3 @@
-// --- START OF FILE About.jsx ---
-
 import { useState, useTransition, useRef } from "react";
 import TabbedComponent from "./TabbedComponent";
 import { SkillCategories } from "../constants/Skills";

@@ -1,4 +1,3 @@
-// --- START OF FILE LeftView.jsx ---
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
